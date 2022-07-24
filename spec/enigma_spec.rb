@@ -4,7 +4,7 @@ require 'date'
 RSpec.describe do
   it 'exists' do
     enigma = Enigma.new
-    expect(enigma).to to_instance_of(Enigma)
+    expect(enigma).to be_instance_of(Enigma)
   end
-  
+
 end
