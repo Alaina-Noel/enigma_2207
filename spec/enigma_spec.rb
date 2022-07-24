@@ -14,7 +14,7 @@ RSpec.describe do
           key: "02715",
           date: "040895"
           }
-    expect(enigma.encrypt).to eq(hash)
+    expect(enigma.encrypt("hello world", "02715", "040895")).to eq(hash)
   end
 
 
