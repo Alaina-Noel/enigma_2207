@@ -1,4 +1,5 @@
 require './lib/enigma'
+require './lib/shift_generator'
 require 'date'
 
 RSpec.describe do
@@ -7,7 +8,17 @@ RSpec.describe do
     expect(enigma).to be_instance_of(Enigma)
   end
 
-  it 'can encrypt hello world' do
+  it 'has no message by default' do
+    enigma = Enigma.new
+    expect(enigma.message).to be(nil)
+  end
+
+  it 'has a shift_generator to be nil by default' do
+    enigma = Enigma.new
+    expect(enigma.shift_generator).to eq(nil)
+  end
+
+  xit 'can encrypt hello world' do
     enigma = Enigma.new
     hash = {
           encryption: "keder ohulw",
