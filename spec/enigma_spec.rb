@@ -18,6 +18,11 @@ RSpec.describe do
     expect(enigma.date).to eq("040895")
   end
 
+  it 'has a shift generator' do
+    enigma = Enigma.new("hello world","02715", "040895" )
+    expect(enigma.shift_generator).to be_instance_of(ShiftGenerator)
+  end
+
   xit 'can encrypt hello world' do
     enigma = Enigma.new("hello world","02715", "040895" )
     hash = {
