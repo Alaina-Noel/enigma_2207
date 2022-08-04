@@ -4,22 +4,22 @@ require 'date'
 
 RSpec.describe do
   it 'exists' do
-    enigma = Enigma.new
+    enigma = Enigma.new("hello world","02715", "040895" )
     expect(enigma).to be_instance_of(Enigma)
   end
 
   xit 'can encrypt hello world' do
-    enigma = Enigma.new
+    enigma = Enigma.new("hello world","02715", "040895" )
     hash = {
           encryption: "keder ohulw",
           key: "02715",
           date: "040895"
           }
-    expect(enigma.encrypt("hello world","040895", "02715")).to eq(hash)
+    expect(enigma.encrypt("hello world")).to eq(hash)
   end
 
   xit 'can encrypt hello world and generate a random key and date' do
-    enigma = Enigma.new
+    enigma = Enigma.new("hello world", key, date)
     hash = {
           encryption: "keder ohulw",
           key: "14354",
@@ -31,7 +31,7 @@ RSpec.describe do
   end
 
   xit 'can decrypt a message' do
-    enigma = Enigma.new
+    enigma = Enigma.new("hello world","02715", "040895" )
     hash =   {
             decryption: "keder ohulw",
             key: "02715",
@@ -41,7 +41,7 @@ RSpec.describe do
   end
 
   xit 'can encrypt a message that includes characters not in character set' do
-    enigma = Enigma.new
+    enigma = Enigma.new("hello world","02715", "040895" )
     hash = {
           encryption: "keder ohulw!$",
           key: "02715",
@@ -51,7 +51,7 @@ RSpec.describe do
   end
 
   xit 'can encrypt a message that includes capital letters' do
-    enigma = Enigma.new
+    enigma = Enigma.new("hello world","02715", "040895" )
     hash = {
           encryption: "keder oh$$w!",
           key: "02715",
