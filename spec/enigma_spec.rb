@@ -37,7 +37,7 @@ RSpec.describe do
         } #little unsure about this test
     allow(enigma).to receive(:date).and_return("280889")
     allow(enigma).to receive(:key).and_return("14354")
-    expect(enigma.encrypt("hello world").to eq(hash)
+    expect(enigma.encrypt("hello world")).to eq(hash)
   end
 
   xit 'can decrypt a message' do
