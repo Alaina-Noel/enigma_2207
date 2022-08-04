@@ -8,11 +8,6 @@ RSpec.describe do
     expect(enigma).to be_instance_of(Enigma)
   end
 
-  it 'has no message by default' do
-    enigma = Enigma.new
-    expect(enigma.message).to be(nil)
-  end
-
   xit 'can encrypt hello world' do
     enigma = Enigma.new
     hash = {
@@ -20,7 +15,19 @@ RSpec.describe do
           key: "02715",
           date: "040895"
           }
-    expect(enigma.encrypt("hello world", "02715", "040895")).to eq(hash)
+    expect(enigma.encrypt("hello world","040895", "02715")).to eq(hash)
+  end
+
+  xit 'can encrypt hello world and generate a random key and date' do
+    enigma = Enigma.new
+    hash = {
+          encryption: "keder ohulw",
+          key: "14354",
+          date: "280889"
+        } #little unsure about this test
+    allow(enigma).to receive(:date).and_return("280889")
+    allow(enigma).to receive(:key).and_return("14354")
+    expect(enigma.encrypt("hello world").to eq(hash)
   end
 
   xit 'can decrypt a message' do
