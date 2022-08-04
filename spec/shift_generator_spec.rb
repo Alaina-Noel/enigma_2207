@@ -16,13 +16,13 @@ RSpec.describe do
 
   it 'exists when enigma in instantiated' do
     enigma = Enigma.new("hello world", "02715", "040895" )
-    expect(shift_generator).to be_instance_of(ShiftGenerator)
+    expect(enigma.shift_generator).to be_instance_of(ShiftGenerator)
   end
 
   it 'has attributes when enigma in instantiated' do
     enigma = Enigma.new("hello world", "02715", "040895" )
-    expect(shift_generator.key).to eq("02715")
-    expect(shift_generator.date).to eq("040895")
+    expect(enigma.shift_generator.key).to eq("02715")
+    expect(enigma.shift_generator.date).to eq("040895")
   end
 
   xit 'can generate a shift for one letter message' do

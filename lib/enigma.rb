@@ -1,6 +1,6 @@
 class Enigma
-  attr_reader :message, :key, :date
-  attr_accessor :shift_generator
+  attr_reader :message, :key, :date, :shift_generator
+  # attr_accessor :shift_generator
 
   def initialize(message, key =  5.times.map{rand(10)}.join , date = Time.now.strftime("%d%m%y") )
     @message = message
