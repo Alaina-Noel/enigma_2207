@@ -28,16 +28,16 @@ RSpec.describe do
   it 'can create four keys from the one key' do
     enigma = Enigma.new("hello world", "02715", "040895" )
     hash = {A: 02, B: 27, C: 71, D: 15}
-    expect(enigma.create_keys).to eq(hash)
+    expect(enigma.shift_generator.create_keys).to eq(hash)
   end
 
-  it 'can create four offsets from the date' do
+  xit 'can create four offsets from the date' do
     enigma = Enigma.new("hello world", "02715", "040895" )
     hash = {A: 1, B: 0, C: 2, D: 5}
-    expect(enigma.create_offsets).to eq(hash)
+    expect(enigma.shift_generator.create_offsets).to eq(hash)
   end
 
-  it 'can generate a shift hash' do
+  xit 'can generate a shift hash' do
     enigma = Enigma.new("hello world", "02715", "040895" )
     hash = {A: 3, B: 27, C: 73, D: 20}
     expect(enigma.shift_generator.create_shifter).to eq(hash)
