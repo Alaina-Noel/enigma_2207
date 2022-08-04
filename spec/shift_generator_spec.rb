@@ -21,7 +21,14 @@ RSpec.describe do
     expect(shift_generator.shift_generate("h", "02715", "040895")).to eq("k")
   end
 
-  xit 'can apply a shift to a word' do
+  xit 'can pad the randomly gemerated numbers with 00 on the left side' do
+    enigma = Enigma.new
+    hash = {
+          encryption: "keder ohulw",
+          key: "02715",
+          date: "040895"
+          }
+    expect(enigma.encrypt("hello world", "2715", "040895")).to eq(hash)
   end
 
 end

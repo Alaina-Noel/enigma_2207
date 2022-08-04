@@ -13,11 +13,6 @@ RSpec.describe do
     expect(enigma.message).to be(nil)
   end
 
-  it 'has a shift_generator to be nil by default' do
-    enigma = Enigma.new
-    expect(enigma.shift_generator).to eq(nil)
-  end
-
   xit 'can encrypt hello world' do
     enigma = Enigma.new
     hash = {
@@ -31,11 +26,11 @@ RSpec.describe do
   xit 'can decrypt a message' do
     enigma = Enigma.new
     hash =   {
-            decryption: "hello world",
+            decryption: "keder ohulw",
             key: "02715",
             date: "040895"
             }
-    expect(enigma.decrypt("keder ohulw", "02715", "040895")).to eq(hash)
+    expect(enigma.decrypt("hello world", "02715", "040895")).to eq(hash)
   end
 
   xit 'can encrypt a message that includes characters not in character set' do
@@ -57,19 +52,4 @@ RSpec.describe do
           }
     expect(enigma.encrypt("HELLO PI$$A!", "02715", "040895")).to eq(hash)
   end
-
-  xit 'can pad the randomly gemerated numbers with 00 on the left side' do
-    enigma = Enigma.new
-    hash = {
-          encryption: "keder ohulw",
-          key: "02715",
-          date: "040895"
-          }
-    expect(enigma.encrypt("hello world", "2715", "040895")).to eq(hash)
-  end
-
-
-
-
-
 end
