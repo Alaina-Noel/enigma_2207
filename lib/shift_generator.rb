@@ -6,4 +6,6 @@ class ShiftGenerator
     @date = date
   end
 
+
+
 end
