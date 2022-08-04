@@ -8,6 +8,16 @@ RSpec.describe do
     expect(enigma).to be_instance_of(Enigma)
   end
 
+  it 'has a key' do
+    enigma = Enigma.new("hello world", "02715", "040895" )
+    expect(enigma.key).to eq("02715")
+  end
+
+  it 'has a date' do
+    enigma = Enigma.new("hello world","02715", "040895" )
+    expect(enigma.date).to eq("040895")
+  end
+
   xit 'can encrypt hello world' do
     enigma = Enigma.new("hello world","02715", "040895" )
     hash = {
