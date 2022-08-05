@@ -1,6 +1,5 @@
 class Enigma
   attr_reader :shift_generator
-  #todo redo this whole thing.
 
   def initialize
     @shift_generator = ShiftGenerator.new
