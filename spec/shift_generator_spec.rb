@@ -1,6 +1,5 @@
 require './lib/enigma'
 require './lib/shift_generator'
-require 'date'
 
 RSpec.describe do
   it 'exists' do
