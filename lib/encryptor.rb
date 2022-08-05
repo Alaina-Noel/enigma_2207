@@ -1,10 +1,10 @@
 class Encryptor
 
   def initialize
-    #I want to initialize it with a shift_generator object
+    #I want to initialize it with a shift_generator object?
   end
 
-  def apply_shift
+  def apply_shift(message, shifter)
 #how do I get these classes to recieve each others information without
 #doing something like enigma.encryptor.apply_shift
   end

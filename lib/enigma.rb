@@ -3,7 +3,7 @@ class Enigma
   #todo redo this whole thing.
 
   def initialize
-    @shift_generator = ShiftGenerator.new(@key, @date)
+    @shift_generator = ShiftGenerator.new
     #encryptor Encrptor(string)
   end
 
