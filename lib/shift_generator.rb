@@ -1,4 +1,7 @@
-module ShiftGenerator
+class ShiftGenerator
+
+  def initialize
+  end
 
   def create_keys(key, date)
     four_keys = {A: 0, B: 0, C: 0, D: 0}
