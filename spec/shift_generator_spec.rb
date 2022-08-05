@@ -21,7 +21,7 @@ RSpec.describe do
 
   it 'can generate a shift hash' do
     shift_generator = ShiftGenerator.new
-    keys = "02715"
+    key = "02715"
     date = "040895"
     expected_shifter = {A: 3, B: 27, C: 73, D: 20}
     expect(shift_generator.create_shifter(key, date)).to eq(expected_shifter)
