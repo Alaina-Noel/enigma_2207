@@ -6,10 +6,8 @@ class Encryptor
     end
 
   def apply_shift(message, shifter)
-    result = ""
+    result = "" #could turn to array & use map then wouldn't need a container
     message.downcase.each_char.with_index do |char, index|
-      # require "pry"
-      # binding.pry
       if !@char_set.include?(char)
         result << char
       else
@@ -27,10 +25,6 @@ class Encryptor
     end
     result
   end
-
-  #maybe I need to condense things more and say that enigma can contain the method
-  #apply shift and have instance variables of shift_generator and those isntance
-  #variables can have methods?
 
 
 end
