@@ -7,7 +7,7 @@ RSpec.describe do
     expect(encryptor).to be_instance_of(Encryptor)
   end
 
-  it 'can put letters into appropriate groups' do
+  xit 'can put letters into appropriate groups' do
     encryptor = Encryptor.new
     shift_generator = ShiftGenerator.new("02715", "040895")
     keys1 = {A: 02, B: 27, C: 71, D: 15}
@@ -23,7 +23,7 @@ RSpec.describe do
     expect(encryptor.apply_shift).to eq(expected_sorted_letters)
   end
 
-  it 'can apply a shift to all letters' do
+  xit 'can apply a shift to all letters' do
     encryptor = Encryptor.new
     shift_generator = ShiftGenerator.new("02715", "040895")
     keys1 = {A: 02, B: 27, C: 71, D: 15}
@@ -39,7 +39,7 @@ RSpec.describe do
     expect(encryptor.apply_shift).to eq(expected_sorted_letters)
   end
 
-  it 'can sort letters back into their original order but encrypted' do
+  xit 'can sort letters back into their original order but encrypted' do
     encryptor = Encryptor.new
     shift_generator = ShiftGenerator.new("02715", "040895")
     keys1 = {A: 02, B: 27, C: 71, D: 15}
