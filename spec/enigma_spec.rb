@@ -19,7 +19,7 @@ RSpec.describe do
     expect(enigma.encryptor).to be_instance_of(Encryptor)
   end
 
-  xit 'can encrypt hello world' do
+  it 'can encrypt hello world' do
     enigma = Enigma.new
     hash = {
           encryption: "keder ohulw",

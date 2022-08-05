@@ -7,8 +7,8 @@ class Enigma
   end
 
   def encrypt(message, key = 5.times.map{rand(10)}.join , date = Time.now.strftime("%d%m%y"))
-      # require "pry"
-      # binding.pry
+      require "pry"
+      binding.pry
 
     {
       encryption: message.apply_shift(message, shifter),
