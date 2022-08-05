@@ -6,7 +6,7 @@ class Enigma
     @encryptor = Encryptor.new
   end
 
-  def encrypt(message, key = 5.times.map{rand(10)}.join , date = Time.now.strftime("%d%m%y"))
+  def encrypt(message, key = 5.times.map{Random.rand(10)}.join , date = Time.now.strftime("%d%m%y"))
       {
       encryption: encryptor.apply_shift(message, shift_generator.create_shifter(key, date)),
       key: key,
