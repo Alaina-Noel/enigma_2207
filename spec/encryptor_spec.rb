@@ -15,7 +15,7 @@ RSpec.describe do
     expect(encryptor.char_set).to eq(char_set_expected)
   end
 
-  xit 'can apply a shift to a message' do
+  it 'can apply a shift to a message' do
     encryptor = Encryptor.new
     shift_generator = ShiftGenerator.new
     keys1 = shift_generator.create_keys("02715", "040895")
@@ -25,7 +25,7 @@ RSpec.describe do
     expect(encryptor.apply_shift("hello world", shifter)).to eq("keder ohulw")
   end
 
-  xit 'can apply a shift to a message' do
+  xit 'can apply a shift to a message with extra characters' do
     encryptor = Encryptor.new
     shifter = {A: 3, B: 27, C: 73, D: 20}
 
