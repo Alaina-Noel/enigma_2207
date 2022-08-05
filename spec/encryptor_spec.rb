@@ -44,5 +44,19 @@ RSpec.describe do
     expect(encryptor.apply_shift("HELLO world$!", shifter)).to eq("keder ohulw$!")
   end
 
+  it 'can apply an unshift to a message' do
+    encryptor = Encryptor.new
+    shifter = {A: 3, B: 27, C: 73, D: 20}
+
+    expect(encryptor.apply_unshift("keder ohulw", shifter)).to eq("hello world")
+  end
+
+  it 'can apply an unshift to a message with extra characters' do
+    encryptor = Encryptor.new
+    shifter = {A: 3, B: 27, C: 73, D: 20}
+
+    expect(encryptor.apply_unshift("ke@er ohulw", shifter)).to eq("he@lo world")
+  end
+
 
 end

@@ -14,4 +14,13 @@ class Enigma
       }
   end
 
+  def decrypt(message, key, date)
+      {
+      decryption: encryptor.apply_unshift(message, shift_generator.create_shifter(key, date)),
+      key: key,
+      date: date
+      }
+  end
+
+
 end
