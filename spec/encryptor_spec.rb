@@ -25,7 +25,7 @@ RSpec.describe do
     expect(encryptor.apply_shift("hello world", shifter)).to eq("keder ohulw")
   end
 
-  xit 'can apply a shift to a message with extra characters' do
+  it 'can apply a shift to a message with extra characters' do
     encryptor = Encryptor.new
     shifter = {A: 3, B: 27, C: 73, D: 20}
 
