@@ -31,7 +31,7 @@ RSpec.describe do
     expect(enigma.shift_generator.create_keys).to eq(hash)
   end
 
-  xit 'can create four offsets from the date' do
+  it 'can create four offsets from the date' do
     enigma = Enigma.new("hello world", "02715", "040895" )
     hash = {A: 1, B: 0, C: 2, D: 5}
     expect(enigma.shift_generator.create_offsets).to eq(hash)
