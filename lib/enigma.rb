@@ -14,4 +14,5 @@ class Enigma
       }
   end
 
+
 end

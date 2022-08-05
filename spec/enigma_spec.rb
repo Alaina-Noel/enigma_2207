@@ -57,10 +57,16 @@ RSpec.describe do
     expect(enigma.encrypt("hello world")).to eq(encrypted_hash)
   end
 
-  xit 'can decrypt a message' do
+  it 'can decrypt a message' do
     enigma = Enigma.new
     decrypted_hash = { decryption: "hello world", key: "02715", date: "040895" }
     expect(enigma.decrypt("keder ohulw", "02715", "040895")).to eq(decrypted_hash)
+  end
+
+  it 'can decrypt a message when non char_set_expected characters are in the mix' do
+    enigma = Enigma.new
+    decrypted_hash = { decryption: "h5llo world", key: "02715", date: "040895" }
+    expect(enigma.decrypt("k5der ohulw", "02715", "040895")).to eq(decrypted_hash)
   end
 
 
