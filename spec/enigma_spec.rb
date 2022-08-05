@@ -1,5 +1,6 @@
 require './lib/enigma'
 require './lib/shift_generator'
+require './lib/encryptor'
 require 'date'
 
 RSpec.describe do
@@ -18,7 +19,7 @@ RSpec.describe do
     expect(enigma.encryptor).to be_instance_of(Encryptor)
   end
 
-  it 'can encrypt hello world' do
+  xit 'can encrypt hello world' do
     enigma = Enigma.new
     hash = {
           encryption: "keder ohulw",
