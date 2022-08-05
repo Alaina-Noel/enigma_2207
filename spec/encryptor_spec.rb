@@ -8,14 +8,20 @@ RSpec.describe do
     expect(encryptor).to be_instance_of(Encryptor)
   end
 
-  it 'can apply a shift to a message' do
+  it 'has a char set' do
+    encryptor = Encryptor.new
+    char_set_expected = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q",
+                        "r", "s", "t", "u", "v", "w", "x", "y", "z", " "]
+    expect(encryptor.char_set).to eq(char_set_expected)
+  end
+
+  xit 'can apply a shift to a message' do
     encryptor = Encryptor.new
     shift_generator = ShiftGenerator.new
     keys1 = shift_generator.create_keys("02715", "040895")
     offsets1 = shift_generator.create_offsets("02715", "040895")
     shifter = shift_generator.create_shifter(keys1, offsets1)
-require "pry"
-binding.pry
+
     expect(encryptor.apply_shift("hello world", shifter)).to eq("keder ohulw")
   end
 

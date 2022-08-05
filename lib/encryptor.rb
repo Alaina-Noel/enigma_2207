@@ -1,8 +1,9 @@
 class Encryptor
+  attr_reader :char_set
 
   def initialize
-    #I want to initialize it with a shift_generator object?
-  end
+    @char_set = ("a".."z").to_a << " "
+    end
 
   def apply_shift(message, shifter)
     message.each_char.with_index do |char, index|
