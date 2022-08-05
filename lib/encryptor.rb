@@ -1,7 +1,7 @@
 class Encryptor
 
   def initialize
-    #I want to initialize it with a shift_generator objext
+    #I want to initialize it with a shift_generator object
   end
 
   def apply_shift
