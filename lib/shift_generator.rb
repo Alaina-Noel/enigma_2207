@@ -1,4 +1,7 @@
-module ShiftGenerator
+class ShiftGenerator
+
+  def initialize
+  end
 
   def create_keys(key, date)
     four_keys = {A: 0, B: 0, C: 0, D: 0}
@@ -20,10 +23,17 @@ module ShiftGenerator
       four_offsets
   end
 
-  def create_shifter(keys, offsets)
-    keys.merge!(offsets) do |shift_letter, key, offset|
+  def create_shifter(key, date)
+    four_keys = create_keys(key, date)
+    four_offsets = create_offsets(key, date)
+    four_keys.merge!(four_offsets) do |shift_letter, key, offset|
       key + offset
     end
   end
+
+
+
+
+
 
 end
