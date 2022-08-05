@@ -7,6 +7,14 @@ RSpec.describe do
     expect(shift_generator).to be_instance_of(ShiftGenerator)
   end
 
+  it 'has a char set' do
+    shift_generator = ShiftGenerator.new
+    shifter = {A: 3, B: 27, C: 73, D: 20}
+    char_set_expected = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q",
+                        "r", "s", "t", "u", "v", "w", "x", "y", "z", " "]
+    expect(shift_generator.char_set).to eq(char_set_expected)
+  end
+
   it 'can create four keys from the one key' do
     shift_generator = ShiftGenerator.new
     hash = {A: 02, B: 27, C: 71, D: 15}

@@ -1,5 +1,4 @@
 require './lib/encryptor'
-require './lib/enigma'
 
 RSpec.describe do
   it 'exists' do

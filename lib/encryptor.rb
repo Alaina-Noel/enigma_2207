@@ -5,8 +5,15 @@ class Encryptor
   end
 
   def apply_shift(message, shifter)
-#how do I get these classes to recieve each others information without
-#doing something like enigma.encryptor.apply_shift
+    message.each_char.with_index do |char, index|
+      if index % 4 == 0
+        require "pry"
+        binding.pry
+      elsif index % 4 == 1
+      elsif index % 4 == 2
+      elsif index % 4 == 3
+      end
+    end
   end
 
   #maybe I need to condense things more and say that enigma can contain the method

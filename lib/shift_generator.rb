@@ -1,6 +1,7 @@
 class ShiftGenerator
 
   def initialize
+
   end
 
   def create_keys(key, date)
