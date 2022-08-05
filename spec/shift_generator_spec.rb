@@ -1,6 +1,5 @@
 require './lib/enigma'
 require './lib/shift_generator'
-require 'date'
 
 RSpec.describe do
   it 'exists' do
@@ -25,21 +24,25 @@ RSpec.describe do
     expect(enigma.shift_generator.date).to eq("040895")
   end
 
-  xit 'can generate a shift for one letter message' do
-    shift_generator = ShiftGenerator.new("02715", "040895")
-    shifter = false
-
-    expect(shift_generator.shift_generate("h", "02715", "040895")).to eq("k")
+  it 'can create four keys from the one key' do
+    enigma = Enigma.new("hello world", "02715", "040895" )
+    hash = {A: 02, B: 27, C: 71, D: 15}
+    expect(enigma.shift_generator.create_keys).to eq(hash)
   end
 
-  xit 'can pad the randomly gemerated numbers with 00 on the left side' do
-    enigma = Enigma.new
-    hash = {
-          encryption: "keder ohulw",
-          key: "02715",
-          date: "040895"
-          }
-    expect(enigma.encrypt("hello world", "2715", "040895")).to eq(hash)
+  it 'can create four offsets from the date' do
+    enigma = Enigma.new("hello world", "02715", "040895" )
+    hash = {A: 1, B: 0, C: 2, D: 5}
+    expect(enigma.shift_generator.create_offsets).to eq(hash)
   end
+
+  it 'can generate a shift hash' do
+    enigma = Enigma.new("hello world", "02715", "040895" )
+    keys1 = {A: 02, B: 27, C: 71, D: 15}
+    offsets1 = {A: 1, B: 0, C: 2, D: 5}
+    expected_shift = {A: 3, B: 27, C: 73, D: 20}
+    expect(enigma.shift_generator.create_shifter(keys1, offsets1)).to eq(expected_shift)
+  end
+
 
 end
