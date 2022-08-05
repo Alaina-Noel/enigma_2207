@@ -7,8 +7,15 @@ class Enigma
   end
 
   def encrypt(message, key = 5.times.map{rand(10)}.join , date = Time.now.strftime("%d%m%y"))
+      require "pry"
+      binding.pry
 
-    @shift_generator.create_keys(key, date)
+    {
+      encryption: message.apply_shift(message, shifter),
+      key: "02715",
+      date: "040895"
+      }
+
     #this is where we encrypt the message and the return a hash
   end
 

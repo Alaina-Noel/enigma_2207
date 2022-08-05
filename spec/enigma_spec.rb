@@ -13,6 +13,11 @@ RSpec.describe do
     expect(enigma.shift_generator).to be_instance_of(ShiftGenerator)
   end
 
+  it 'has an encryptor' do
+    enigma = Enigma.new
+    expect(enigma.encryptor).to be_instance_of(Encryptor)
+  end
+
   it 'can encrypt hello world' do
     enigma = Enigma.new
     hash = {
