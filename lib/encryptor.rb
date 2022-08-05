@@ -7,7 +7,7 @@ class Encryptor
 
   def apply_shift(message, shifter)
     result = ""
-    message.each_char.with_index do |char, index|
+    message.downcase.each_char.with_index do |char, index|
       # require "pry"
       # binding.pry
       if !@char_set.include?(char)
