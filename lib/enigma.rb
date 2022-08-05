@@ -1,14 +1,14 @@
 class Enigma
-  attr_reader :message, :key, :date, :shift_generator
+  attr_reader :shift_generator
 
-  def initialize(message, key =  5.times.map{rand(10)}.join , date = Time.now.strftime("%d%m%y") )
-    @message = message
-    @key = key
-    @date = date
-    @shift_generator = ShiftGenerator.new(@key, @date)
+  def initialize
+    @shift_generator = ShiftGenerator.new
+    #encryptor Encrptor(string)
   end
 
-  def encrypt(message)
+  def encrypt(message, key = 5.times.map{rand(10)}.join , date = Time.now.strftime("%d%m%y"))
+
+    @shift_generator.create_keys(key, date)
     #this is where we encrypt the message and the return a hash
   end
 
