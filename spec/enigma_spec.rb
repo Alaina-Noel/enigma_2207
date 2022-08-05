@@ -29,7 +29,27 @@ RSpec.describe do
     expect(enigma.encrypt("hello world","02715", "040895" )).to eq(hash)
   end
 
-  it 'can encrypt hello world and generate a random key and date' do
+  it 'can encrypt a message that includes characters not in character set' do
+    enigma = Enigma.new
+    hash = {
+          encryption: "keder ohulw!$",
+          key: "02715",
+          date: "040895"
+          }
+    expect(enigma.encrypt("hello world!$", "02715", "040895")).to eq(hash)
+  end
+
+  it 'can encrypt a message that includes capital letters' do
+    enigma = Enigma.new
+    hash = {
+          encryption: "keder oh$$w!",
+          key: "02715",
+          date: "040895"
+          }
+    expect(enigma.encrypt("HELLO WO$$D!", "02715", "040895")).to eq(hash)
+  end
+
+  xit 'can encrypt hello world and generate a random key and date' do
     enigma = Enigma.new
     hash = {
           encryption: "keder ohulw",
@@ -51,23 +71,5 @@ RSpec.describe do
     expect(enigma.decrypt("hello world", "02715", "040895")).to eq(hash)
   end
 
-  xit 'can encrypt a message that includes characters not in character set' do
-    enigma = Enigma.new
-    hash = {
-          encryption: "keder ohulw!$",
-          key: "02715",
-          date: "040895"
-          }
-    expect(enigma.encrypt("hello world!$", "02715", "040895")).to eq(hash)
-  end
 
-  xit 'can encrypt a message that includes capital letters' do
-    enigma = Enigma.new
-    hash = {
-          encryption: "keder oh$$w!",
-          key: "02715",
-          date: "040895"
-          }
-    expect(enigma.encrypt("HELLO PI$$A!", "02715", "040895")).to eq(hash)
-  end
 end

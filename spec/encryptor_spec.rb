@@ -18,9 +18,7 @@ RSpec.describe do
   it 'can apply a shift to a message' do
     encryptor = Encryptor.new
     shift_generator = ShiftGenerator.new
-    keys1 = shift_generator.create_keys("02715", "040895")
-    offsets1 = shift_generator.create_offsets("02715", "040895")
-    shifter = shift_generator.create_shifter(keys1, offsets1)
+    shifter = shift_generator.create_shifter("02715", "040895")
 
     expect(encryptor.apply_shift("hello world", shifter)).to eq("keder ohulw")
   end
