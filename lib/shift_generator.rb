@@ -1,12 +1,6 @@
 class ShiftGenerator
-  attr_reader :key, :date
 
-  def initialize(key, date)
-    @key = key
-    @date = date
-  end
-
-  def create_keys
+  def create_keys(key, date)
     four_keys = {A: 0, B: 0, C: 0, D: 0}
     key_array  = key.split("")
     four_keys[:A] = (key_array[0] + key_array[1]).to_i
