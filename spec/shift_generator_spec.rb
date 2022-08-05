@@ -37,10 +37,12 @@ RSpec.describe do
     expect(enigma.shift_generator.create_offsets).to eq(hash)
   end
 
-  xit 'can generate a shift hash' do
+  it 'can generate a shift hash' do
     enigma = Enigma.new("hello world", "02715", "040895" )
-    hash = {A: 3, B: 27, C: 73, D: 20}
-    expect(enigma.shift_generator.create_shifter).to eq(hash)
+    keys1 = {A: 02, B: 27, C: 71, D: 15}
+    offsets1 = {A: 1, B: 0, C: 2, D: 5}
+    expected_shift = {A: 3, B: 27, C: 73, D: 20}
+    expect(enigma.shift_generator.create_shifter(keys1, offsets1)).to eq(expected_shift)
   end
 
 

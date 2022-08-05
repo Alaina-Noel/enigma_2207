@@ -26,8 +26,10 @@ class ShiftGenerator
       four_offsets
   end
 
-  def create_shifter
-    shifter = Hash.new(0)
+  def create_shifter(keys, offsets)
+    keys.merge!(offsets) do |shift_letter, key, offset|
+      key + offset
+    end
   end
 
 end
