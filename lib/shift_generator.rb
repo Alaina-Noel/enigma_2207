@@ -23,12 +23,6 @@ class ShiftGenerator
       four_offsets
   end
 
-  # def create_shifter(keys, offsets)
-  #   keys.merge!(offsets) do |shift_letter, key, offset|
-  #     key + offset
-  #   end
-  # end
-
   def create_shifter(key, date)
     four_keys = create_keys(key, date)
     four_offsets = create_offsets(key, date)

@@ -29,7 +29,7 @@ RSpec.describe do
     expect(enigma.encrypt("hello world","02715", "040895" )).to eq(hash)
   end
 
-  xit 'can encrypt hello world and generate a random key and date' do
+  it 'can encrypt hello world and generate a random key and date' do
     enigma = Enigma.new
     hash = {
           encryption: "keder ohulw",
