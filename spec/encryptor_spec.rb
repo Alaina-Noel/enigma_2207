@@ -28,6 +28,8 @@ RSpec.describe do
     shift_generator = ShiftGenerator.new
     shifter = shift_generator.create_shifter("02715", "040895")
 
+    expect(encryptor.rotate_char("h", 4, shifter)).to eq("k")
+    expect(encryptor.rotate_char("e", 1, shifter)).to eq("e")
     expect(encryptor.apply_shift("hello world", shifter)).to eq("keder ohulw")
   end
 
