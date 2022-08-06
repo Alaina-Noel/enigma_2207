@@ -5,7 +5,11 @@ class Encryptor
     @char_set = ("a".."z").to_a << " "
     end
 
-
+  def apply_rotation(character, shifter_group_key, shifter)
+    return if !@char_set.include?(character)
+    start = @char_set.find_index(character)
+    @char_set.rotate(shifter[shifter_group_key] + start).first
+  end
 
   def apply_shift(message, shifter)
     result = "" #could turn to array & use map then wouldn't need a container

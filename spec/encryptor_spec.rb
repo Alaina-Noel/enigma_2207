@@ -20,7 +20,7 @@ RSpec.describe do
     shift_generator = ShiftGenerator.new
     shifter = shift_generator.create_shifter("02715", "040895")
 
-    expect(encryptor.apply_rotation("h", :A)).to eq("k")
+    expect(encryptor.apply_rotation("h", :A, shifter)).to eq("k")
   end
 
   it 'can apply a shift to a message' do
