@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-08-05T17:22:14-06:00">2022-08-05T17:22:14-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-08-06T11:20:25-06:00">2022-08-06T11:20:25-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         7.11
+         7.7
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>166</b> relevant lines,
-    <span class="green"><b>166</b> lines covered</span> and
+    <b>181</b> relevant lines,
+    <span class="green"><b>181</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -73,22 +73,22 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#e3ab801952f0658da9883592c78925b411dbc372" class="src_link" title="lib/encryptor.rb">lib/encryptor.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">51</td>
-            <td class="cell--number">34</td>
-            <td class="cell--number">34</td>
+            <td class="cell--number">53</td>
+            <td class="cell--number">32</td>
+            <td class="cell--number">32</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">24.56</td>
+            <td class="cell--number">29.50</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#9b8ad9512daf09303fcdbeb5d76fa0f0332238f3" class="src_link" title="lib/enigma.rb">lib/enigma.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">26</td>
+            <td class="cell--number">24</td>
             <td class="cell--number">9</td>
             <td class="cell--number">9</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">4.11</td>
+            <td class="cell--number">4.56</td>
             
           </tr>
         
@@ -99,16 +99,16 @@
             <td class="cell--number">23</td>
             <td class="cell--number">23</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">9.04</td>
+            <td class="cell--number">12.70</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#c27f18b13d11ad4957827a28a11aaaafc5e0a776" class="src_link" title="spec/encryptor_spec.rb">spec/encryptor_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">62</td>
-            <td class="cell--number">35</td>
-            <td class="cell--number">35</td>
+            <td class="cell--number">80</td>
+            <td class="cell--number">47</td>
+            <td class="cell--number">47</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -117,9 +117,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#3e76cb5e8b1d74249a20b4ab1a766ec5744c4ae9" class="src_link" title="spec/enigma_spec.rb">spec/enigma_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">73</td>
-            <td class="cell--number">45</td>
-            <td class="cell--number">45</td>
+            <td class="cell--number">80</td>
+            <td class="cell--number">50</td>
+            <td class="cell--number">50</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -167,8 +167,8 @@
     
 
     <div class="t-line-summary">
-      <b>34</b> relevant lines.
-      <span class="green"><b>34</b> lines covered</span> and
+      <b>32</b> relevant lines.
+      <span class="green"><b>32</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -224,8 +224,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="5">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="21" data-linenumber="5">
+            <span class="hits">21</span>
             
 
             
@@ -263,35 +263,156 @@
 
             
 
+            <code class="ruby">  def rotate_char(char, index, shifter)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="109" data-linenumber="9">
+            <span class="hits">109</span>
+            
+
+            
+
+            <code class="ruby">    if index % 4 == 0</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="30" data-linenumber="10">
+            <span class="hits">30</span>
+            
+
+            
+
+            <code class="ruby">       @char_set.rotate(shifter[:A] + @char_set.find_index(char)).first</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="79" data-linenumber="11">
+            <span class="hits">79</span>
+            
+
+            
+
+            <code class="ruby">    elsif index % 4 == 1</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="29" data-linenumber="12">
+            <span class="hits">29</span>
+            
+
+            
+
+            <code class="ruby">       @char_set.rotate(shifter[:B] + @char_set.find_index(char)).first</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="50" data-linenumber="13">
+            <span class="hits">50</span>
+            
+
+            
+
+            <code class="ruby">    elsif index % 4 == 2</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="30" data-linenumber="14">
+            <span class="hits">30</span>
+            
+
+            
+
+            <code class="ruby">      @char_set.rotate(shifter[:C] + @char_set.find_index(char)).first</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="20" data-linenumber="15">
+            <span class="hits">20</span>
+            
+
+            
+
+            <code class="ruby">    elsif index % 4 == 3</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="20" data-linenumber="16">
+            <span class="hits">20</span>
+            
+
+            
+
+            <code class="ruby">      @char_set.rotate(shifter[:D] + @char_set.find_index(char)).first</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">  def apply_shift(message, shifter)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="9">
-            <span class="hits">9</span>
+          <li class="covered" data-hits="10" data-linenumber="21">
+            <span class="hits">10</span>
             
 
             
 
-            <code class="ruby">    result = &quot;&quot; #could turn to array &amp; use map then wouldn&#39;t need a container</code>
+            <code class="ruby">    message.downcase.split(&quot;&quot;).map.with_index do |char, index|</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="10">
-            <span class="hits">9</span>
-            
-
-            
-
-            <code class="ruby">    message.downcase.each_char.with_index do |char, index|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="108" data-linenumber="11">
-            <span class="hits">108</span>
+          <li class="covered" data-hits="119" data-linenumber="22">
+            <span class="hits">119</span>
             
 
             
@@ -301,134 +422,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="11" data-linenumber="12">
+          <li class="covered" data-hits="11" data-linenumber="23">
             <span class="hits">11</span>
             
 
             
 
-            <code class="ruby">        result &lt;&lt; char</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
-            
-
-            <code class="ruby">      else</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="97" data-linenumber="14">
-            <span class="hits">97</span>
-            
-
-            
-
-            <code class="ruby">        start = @char_set.find_index(char)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="97" data-linenumber="15">
-            <span class="hits">97</span>
-            
-
-            
-
-            <code class="ruby">        if index % 4 == 0</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="26" data-linenumber="16">
-            <span class="hits">26</span>
-            
-
-            
-
-            <code class="ruby">          result &lt;&lt; @char_set.rotate(shifter[:A] + start).first</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="71" data-linenumber="17">
-            <span class="hits">71</span>
-            
-
-            
-
-            <code class="ruby">        elsif index % 4 == 1</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="26" data-linenumber="18">
-            <span class="hits">26</span>
-            
-
-            
-
-            <code class="ruby">          result &lt;&lt; @char_set.rotate(shifter[:B] + start).first</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="45" data-linenumber="19">
-            <span class="hits">45</span>
-            
-
-            
-
-            <code class="ruby">        elsif index % 4 == 2</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="27" data-linenumber="20">
-            <span class="hits">27</span>
-            
-
-            
-
-            <code class="ruby">          result &lt;&lt; @char_set.rotate(shifter[:C] + start).first</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="18" data-linenumber="21">
-            <span class="hits">18</span>
-            
-
-            
-
-            <code class="ruby">        elsif index % 4 == 3</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="18" data-linenumber="22">
-            <span class="hits">18</span>
-            
-
-            
-
-            <code class="ruby">          result &lt;&lt; @char_set.rotate(shifter[:D] + start).first</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="23">
-            
-            
-
-            
-
-            <code class="ruby">        end</code>
+            <code class="ruby">        char</code>
           </li>
         </div>
       
@@ -439,29 +439,29 @@
 
             
 
+            <code class="ruby">      else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="108" data-linenumber="25">
+            <span class="hits">108</span>
+            
+
+            
+
+            <code class="ruby">        rotate_char(char, index, shifter)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+            
+
+            
+
             <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="25">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="9" data-linenumber="26">
-            <span class="hits">9</span>
-            
-
-            
-
-            <code class="ruby">    result</code>
           </li>
         </div>
       
@@ -472,7 +472,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end.join.to_s</code>
           </li>
         </div>
       
@@ -483,199 +483,122 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="29">
+          <li class="covered" data-hits="1" data-linenumber="30">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def apply_unshift(message, shifter)</code>
+            <code class="ruby">  def unrotate_char(char, index, shifter)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="30">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="56" data-linenumber="31">
+            <span class="hits">56</span>
             
 
             
 
-            <code class="ruby">    result = &quot;&quot;</code>
+            <code class="ruby">    if index % 4 == 0</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="31">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="17" data-linenumber="32">
+            <span class="hits">17</span>
             
 
             
 
-            <code class="ruby">    message.each_char.with_index do |char, index|</code>
+            <code class="ruby">      @char_set.rotate(@char_set.find_index(char) - shifter[:A]).first</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="44" data-linenumber="32">
-            <span class="hits">44</span>
+          <li class="covered" data-hits="39" data-linenumber="33">
+            <span class="hits">39</span>
             
 
             
 
-            <code class="ruby">      if !@char_set.include?(char)</code>
+            <code class="ruby">    elsif index % 4 == 1</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="33">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="14" data-linenumber="34">
+            <span class="hits">14</span>
             
 
             
 
-            <code class="ruby">        result &lt;&lt; char</code>
+            <code class="ruby">      @char_set.rotate(@char_set.find_index(char) - shifter[:B]).first</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="34">
-            
-            
-
+          <li class="covered" data-hits="25" data-linenumber="35">
+            <span class="hits">25</span>
             
 
-            <code class="ruby">      else</code>
+            
+
+            <code class="ruby">    elsif index % 4 == 2</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="42" data-linenumber="35">
-            <span class="hits">42</span>
+          <li class="covered" data-hits="15" data-linenumber="36">
+            <span class="hits">15</span>
             
 
             
 
-            <code class="ruby">        start = @char_set.find_index(char)</code>
+            <code class="ruby">      @char_set.rotate(@char_set.find_index(char) - shifter[:C]).first</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="42" data-linenumber="36">
-            <span class="hits">42</span>
+          <li class="covered" data-hits="10" data-linenumber="37">
+            <span class="hits">10</span>
             
 
             
 
-            <code class="ruby">        if index % 4 == 0</code>
+            <code class="ruby">    elsif index % 4 == 3</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="37">
-            <span class="hits">12</span>
+          <li class="covered" data-hits="10" data-linenumber="38">
+            <span class="hits">10</span>
             
 
             
 
-            <code class="ruby">          result &lt;&lt; @char_set.rotate(start - shifter[:A]).first</code>
+            <code class="ruby">      @char_set.rotate(@char_set.find_index(char) - shifter[:D]).first</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="30" data-linenumber="38">
-            <span class="hits">30</span>
-            
-
-            
-
-            <code class="ruby">        elsif index % 4 == 1</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="11" data-linenumber="39">
-            <span class="hits">11</span>
-            
-
-            
-
-            <code class="ruby">          result &lt;&lt; @char_set.rotate(start - shifter[:B]).first</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="19" data-linenumber="40">
-            <span class="hits">19</span>
-            
-
-            
-
-            <code class="ruby">        elsif index % 4 == 2</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="11" data-linenumber="41">
-            <span class="hits">11</span>
-            
-
-            
-
-            <code class="ruby">          result &lt;&lt; @char_set.rotate(start - shifter[:C]).first</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="8" data-linenumber="42">
-            <span class="hits">8</span>
-            
-
-            
-
-            <code class="ruby">        elsif index % 4 == 3</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="8" data-linenumber="43">
-            <span class="hits">8</span>
-            
-
-            
-
-            <code class="ruby">          result &lt;&lt; @char_set.rotate(start - shifter[:D]).first</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="44">
-            
-            
-
-            
-
-            <code class="ruby">        end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="45">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="46">
+          <li class="never" data-hits="" data-linenumber="39">
             
             
 
@@ -686,18 +609,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="47">
-            <span class="hits">4</span>
-            
-
-            
-
-            <code class="ruby">    result</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="48">
+          <li class="never" data-hits="" data-linenumber="40">
             
             
 
@@ -708,13 +620,101 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="49">
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="42">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def apply_unshift(message, shifter)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="5" data-linenumber="43">
+            <span class="hits">5</span>
+            
+
+            
+
+            <code class="ruby">    message.downcase.split(&quot;&quot;).map.with_index do |char, index|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="55" data-linenumber="44">
+            <span class="hits">55</span>
+            
+
+            
+
+            <code class="ruby">      if !@char_set.include?(char)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="45">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">        char</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="46">
+            
+            
+
+            
+
+            <code class="ruby">      else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="53" data-linenumber="47">
+            <span class="hits">53</span>
+            
+
+            
+
+            <code class="ruby">        unrotate_char(char, index, shifter)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="48">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="49">
+            
+            
+
+            
+
+            <code class="ruby">    end.join.to_s</code>
           </li>
         </div>
       
@@ -725,12 +725,34 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="51">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="52">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="53">
             
             
 
@@ -816,8 +838,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="5">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="11" data-linenumber="5">
+            <span class="hits">11</span>
             
 
             
@@ -827,8 +849,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="6">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="11" data-linenumber="6">
+            <span class="hits">11</span>
             
 
             
@@ -882,8 +904,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="11">
-            <span class="hits">5</span>
+          <li class="covered" data-hits="6" data-linenumber="11">
+            <span class="hits">6</span>
             
 
             
@@ -921,7 +943,7 @@
 
             
 
-            <code class="ruby">      }</code>
+            <code class="ruby">    }</code>
           </li>
         </div>
       
@@ -954,34 +976,23 @@
 
             
 
-            <code class="ruby">  def decrypt(message, key, date)</code>
+            <code class="ruby">  def decrypt(ciphertext, key, date)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-            
-
+          <li class="covered" data-hits="3" data-linenumber="18">
+            <span class="hits">3</span>
             
 
-            <code class="ruby">      {</code>
+            
+
+            <code class="ruby">      { decryption: encryptor.apply_unshift(ciphertext, shift_generator.create_shifter(key, date)),</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="19">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      decryption: encryptor.apply_unshift(message, shift_generator.create_shifter(key, date)),</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="20">
+          <li class="never" data-hits="" data-linenumber="19">
             
             
 
@@ -992,29 +1003,18 @@
         </div>
       
         <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">      date: date }</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="never" data-hits="" data-linenumber="21">
-            
-            
-
-            
-
-            <code class="ruby">      date: date</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="22">
-            
-            
-
-            
-
-            <code class="ruby">      }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="23">
             
             
 
@@ -1025,29 +1025,29 @@
         </div>
       
         <div>
+          <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
           <li class="never" data-hits="" data-linenumber="24">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="25">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="26">
             
             
 
@@ -1155,8 +1155,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="7">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="14" data-linenumber="7">
+            <span class="hits">14</span>
             
 
             
@@ -1166,8 +1166,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="8">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="14" data-linenumber="8">
+            <span class="hits">14</span>
             
 
             
@@ -1177,8 +1177,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="9">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="14" data-linenumber="9">
+            <span class="hits">14</span>
             
 
             
@@ -1188,8 +1188,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="10">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="14" data-linenumber="10">
+            <span class="hits">14</span>
             
 
             
@@ -1199,8 +1199,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="11">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="14" data-linenumber="11">
+            <span class="hits">14</span>
             
 
             
@@ -1210,8 +1210,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="12">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="14" data-linenumber="12">
+            <span class="hits">14</span>
             
 
             
@@ -1221,8 +1221,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="13">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="14" data-linenumber="13">
+            <span class="hits">14</span>
             
 
             
@@ -1265,8 +1265,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="17">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="14" data-linenumber="17">
+            <span class="hits">14</span>
             
 
             
@@ -1276,8 +1276,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="18">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="14" data-linenumber="18">
+            <span class="hits">14</span>
             
 
             
@@ -1287,8 +1287,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="19">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="14" data-linenumber="19">
+            <span class="hits">14</span>
             
 
             
@@ -1298,8 +1298,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="20">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="14" data-linenumber="20">
+            <span class="hits">14</span>
             
 
             
@@ -1309,8 +1309,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="21">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="14" data-linenumber="21">
+            <span class="hits">14</span>
             
 
             
@@ -1320,8 +1320,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="22">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="14" data-linenumber="22">
+            <span class="hits">14</span>
             
 
             
@@ -1331,8 +1331,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="23">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="14" data-linenumber="23">
+            <span class="hits">14</span>
             
 
             
@@ -1375,8 +1375,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="27">
-            <span class="hits">9</span>
+          <li class="covered" data-hits="13" data-linenumber="27">
+            <span class="hits">13</span>
             
 
             
@@ -1386,8 +1386,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="28">
-            <span class="hits">9</span>
+          <li class="covered" data-hits="13" data-linenumber="28">
+            <span class="hits">13</span>
             
 
             
@@ -1397,8 +1397,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="29">
-            <span class="hits">9</span>
+          <li class="covered" data-hits="13" data-linenumber="29">
+            <span class="hits">13</span>
             
 
             
@@ -1408,8 +1408,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="36" data-linenumber="30">
-            <span class="hits">36</span>
+          <li class="covered" data-hits="52" data-linenumber="30">
+            <span class="hits">52</span>
             
 
             
@@ -1536,8 +1536,8 @@
     
 
     <div class="t-line-summary">
-      <b>35</b> relevant lines.
-      <span class="green"><b>35</b> lines covered</span> and
+      <b>47</b> relevant lines.
+      <span class="green"><b>47</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -1742,7 +1742,7 @@
 
             
 
-            <code class="ruby">  it &#39;can apply a shift to a message&#39; do</code>
+            <code class="ruby">  it &#39;can rotate a single character&#39; do</code>
           </li>
         </div>
       
@@ -1797,7 +1797,7 @@
 
             
 
-            <code class="ruby">    expect(encryptor.apply_shift(&quot;hello world&quot;, shifter)).to eq(&quot;keder ohulw&quot;)</code>
+            <code class="ruby">    expect(encryptor.rotate_char(&quot;h&quot;, 4, shifter)).to eq(&quot;k&quot;)</code>
           </li>
         </div>
       
@@ -1830,7 +1830,7 @@
 
             
 
-            <code class="ruby">  it &#39;can apply a shift to a message with extra characters&#39; do</code>
+            <code class="ruby">  it &#39;can apply a shift to a message&#39; do</code>
           </li>
         </div>
       
@@ -1852,12 +1852,23 @@
 
             
 
-            <code class="ruby">    shifter = {A: 3, B: 27, C: 73, D: 20}</code>
+            <code class="ruby">    shift_generator = ShiftGenerator.new</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="29">
+          <li class="covered" data-hits="1" data-linenumber="29">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    shifter = shift_generator.create_shifter(&quot;02715&quot;, &quot;040895&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
             
             
 
@@ -1868,24 +1879,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="30">
+          <li class="covered" data-hits="1" data-linenumber="31">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    expect(encryptor.apply_shift(&quot;hello world$!&quot;, shifter)).to eq(&quot;keder ohulw$!&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
+            <code class="ruby">    expect(encryptor.apply_shift(&quot;hello world&quot;, shifter)).to eq(&quot;keder ohulw&quot;)</code>
           </li>
         </div>
       
@@ -1896,18 +1896,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="33">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="33">
+            
             
 
             
 
-            <code class="ruby">  it &#39;can apply a shift to a message with extra characters&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1918,7 +1918,7 @@
 
             
 
-            <code class="ruby">    encryptor = Encryptor.new</code>
+            <code class="ruby">  it &#39;can apply a shift to a message with extra characters&#39; do</code>
           </li>
         </div>
       
@@ -1929,12 +1929,23 @@
 
             
 
+            <code class="ruby">    encryptor = Encryptor.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="36">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    shifter = {A: 3, B: 27, C: 73, D: 20}</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="36">
+          <li class="never" data-hits="" data-linenumber="37">
             
             
 
@@ -1945,7 +1956,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="37">
+          <li class="covered" data-hits="1" data-linenumber="38">
             <span class="hits">1</span>
             
 
@@ -1956,7 +1967,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
+          <li class="never" data-hits="" data-linenumber="39">
             
             
 
@@ -1967,24 +1978,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
+          <li class="never" data-hits="" data-linenumber="40">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="40">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  it &#39;can apply a shift to a message with capital letters&#39; do</code>
           </li>
         </div>
       
@@ -1995,7 +1995,7 @@
 
             
 
-            <code class="ruby">    encryptor = Encryptor.new</code>
+            <code class="ruby">  it &#39;can apply a shift to a message with extra characters&#39; do</code>
           </li>
         </div>
       
@@ -2006,12 +2006,23 @@
 
             
 
+            <code class="ruby">    encryptor = Encryptor.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="43">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    shifter = {A: 3, B: 27, C: 73, D: 20}</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
+          <li class="never" data-hits="" data-linenumber="44">
             
             
 
@@ -2022,24 +2033,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="44">
+          <li class="covered" data-hits="1" data-linenumber="45">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    expect(encryptor.apply_shift(&quot;HELLO world$!&quot;, shifter)).to eq(&quot;keder ohulw$!&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="45">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
+            <code class="ruby">    expect(encryptor.apply_shift(&quot;hello world$!&quot;, shifter)).to eq(&quot;keder ohulw$!&quot;)</code>
           </li>
         </div>
       
@@ -2050,18 +2050,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="47">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="47">
+            
             
 
             
 
-            <code class="ruby">  it &#39;can apply an unshift to a message&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2072,7 +2072,7 @@
 
             
 
-            <code class="ruby">    encryptor = Encryptor.new</code>
+            <code class="ruby">  it &#39;can apply a shift to a message with capital letters&#39; do</code>
           </li>
         </div>
       
@@ -2083,12 +2083,23 @@
 
             
 
+            <code class="ruby">    encryptor = Encryptor.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="50">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    shifter = {A: 3, B: 27, C: 73, D: 20}</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="50">
+          <li class="never" data-hits="" data-linenumber="51">
             
             
 
@@ -2099,24 +2110,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="51">
+          <li class="covered" data-hits="1" data-linenumber="52">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    expect(encryptor.apply_unshift(&quot;keder ohulw&quot;, shifter)).to eq(&quot;hello world&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="52">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
+            <code class="ruby">    expect(encryptor.apply_shift(&quot;HELLO world$!&quot;, shifter)).to eq(&quot;keder ohulw$!&quot;)</code>
           </li>
         </div>
       
@@ -2127,18 +2127,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="54">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="54">
+            
             
 
             
 
-            <code class="ruby">  it &#39;can apply an unshift to a message with extra characters&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2149,7 +2149,7 @@
 
             
 
-            <code class="ruby">    encryptor = Encryptor.new</code>
+            <code class="ruby">  it &#39;can un-rotate a single character&#39; do</code>
           </li>
         </div>
       
@@ -2160,18 +2160,18 @@
 
             
 
-            <code class="ruby">    shifter = {A: 3, B: 27, C: 73, D: 20}</code>
+            <code class="ruby">    encryptor = Encryptor.new</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="57">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="57">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    shift_generator = ShiftGenerator.new</code>
           </li>
         </div>
       
@@ -2182,7 +2182,7 @@
 
             
 
-            <code class="ruby">    expect(encryptor.apply_unshift(&quot;ke@er ohulw&quot;, shifter)).to eq(&quot;he@lo world&quot;)</code>
+            <code class="ruby">    shifter = shift_generator.create_shifter(&quot;02715&quot;, &quot;040895&quot;)</code>
           </li>
         </div>
       
@@ -2193,18 +2193,18 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="60">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="60">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    expect(encryptor.unrotate_char(&quot;k&quot;, 4, shifter)).to eq(&quot;h&quot;)</code>
           </li>
         </div>
       
@@ -2215,12 +2215,210 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="62">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="63">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &#39;can apply an unshift to a message&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="64">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    encryptor = Encryptor.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="65">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    shifter = {A: 3, B: 27, C: 73, D: 20}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="66">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="67">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(encryptor.unrotate_char(&quot;k&quot;, 4, shifter)).to eq(&quot;h&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="68">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(encryptor.unrotate_char(&quot;w&quot;, 10, shifter)).to eq(&quot;d&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="69">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(encryptor.apply_unshift(&quot;keder ohulw&quot;, shifter)).to eq(&quot;hello world&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="70">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="71">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="72">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &#39;can apply an unshift to a message with extra characters&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="73">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    encryptor = Encryptor.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="74">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    shifter = {A: 3, B: 27, C: 73, D: 20}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="75">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="76">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(encryptor.apply_unshift(&quot;ke@er ohulw&quot;, shifter)).to eq(&quot;he@lo world&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="77">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="78">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="79">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="80">
             
             
 
@@ -2249,8 +2447,8 @@
     
 
     <div class="t-line-summary">
-      <b>45</b> relevant lines.
-      <span class="green"><b>45</b> lines covered</span> and
+      <b>50</b> relevant lines.
+      <span class="green"><b>50</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -2543,7 +2741,7 @@
 
             
 
-            <code class="ruby">    expect(enigma.encrypt(&quot;hello world&quot;,&quot;02715&quot;, &quot;040895&quot; )).to eq(encrypted_hash)</code>
+            <code class="ruby">    expect(enigma.encrypt(&quot;hello world&quot;,&quot;02715&quot;, &quot;040895&quot;)).to eq(encrypted_hash)</code>
           </li>
         </div>
       
@@ -3043,7 +3241,73 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="72">
+          <li class="covered" data-hits="1" data-linenumber="72">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &#39;can encrypt and decrypt&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="73">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    enigma = Enigma.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="74">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    encrypted = enigma.encrypt(&quot;hello world&quot;,&quot;02715&quot;, &quot;040895&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="75">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    decrypted_hash = { decryption: &quot;hello world&quot;, key: &quot;02715&quot;, date: &quot;040895&quot; }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="76">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(enigma.decrypt(encrypted[:encryption], &quot;02715&quot;, &quot;040895&quot;)).to eq(decrypted_hash)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="77">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="78">
             
             
 
@@ -3054,7 +3318,18 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="73">
+          <li class="never" data-hits="" data-linenumber="79">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="80">
             
             
 
