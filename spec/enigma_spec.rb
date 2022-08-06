@@ -69,10 +69,10 @@ RSpec.describe do
     expect(enigma.decrypt("k5der ohulw", "02715", "040895")).to eq(decrypted_hash)
   end
 
-  xit 'can encrypt and decrypt' do
+  it 'can encrypt and decrypt' do
     enigma = Enigma.new
     encrypted = enigma.encrypt("hello world","02715", "040895")
-    decrypted_hash = { decryption: "h5llo world", key: "02715", date: "040895" }
+    decrypted_hash = { decryption: "hello world", key: "02715", date: "040895" }
     expect(enigma.decrypt(encrypted[:encryption], "02715", "040895")).to eq(decrypted_hash)
   end
 
