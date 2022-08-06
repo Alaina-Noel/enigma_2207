@@ -5,6 +5,8 @@ class Encryptor
     @char_set = ("a".."z").to_a << " "
     end
 
+
+
   def apply_shift(message, shifter)
     result = "" #could turn to array & use map then wouldn't need a container
     message.downcase.each_char.with_index do |char, index|
