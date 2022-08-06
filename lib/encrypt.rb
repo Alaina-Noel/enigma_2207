@@ -10,4 +10,3 @@ file2 = File.open("#{ARGV[1]}", "w")
 file2.write(encrypted[:encryption])
 file2.close
 puts "Created '#{ARGV[1]}' with the key #{encrypted[:key]} and date #{encrypted[:date]}"
-#need to take care of multiline messages

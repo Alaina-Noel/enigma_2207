@@ -31,9 +31,4 @@ class ShiftGenerator
     end
   end
 
-
-
-
-
-
 end
