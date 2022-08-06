@@ -11,15 +11,13 @@ class Enigma
       encryption: encryptor.apply_shift(message, shift_generator.create_shifter(key, date)),
       key: key,
       date: date
-      }
+    }
   end
 
-  def decrypt(message, key, date)
-      {
-      decryption: encryptor.apply_unshift(message, shift_generator.create_shifter(key, date)),
+  def decrypt(ciphertext, key, date)
+      { decryption: encryptor.apply_unshift(ciphertext, shift_generator.create_shifter(key, date)),
       key: key,
-      date: date
-      }
+      date: date }
   end
 
 

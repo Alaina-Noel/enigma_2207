@@ -23,7 +23,7 @@ RSpec.describe do
     enigma = Enigma.new
     encrypted_hash = { encryption: "keder ohulw", key: "02715", date: "040895" }
 
-    expect(enigma.encrypt("hello world","02715", "040895" )).to eq(encrypted_hash)
+    expect(enigma.encrypt("hello world","02715", "040895")).to eq(encrypted_hash)
   end
 
   it 'can encrypt a message that includes characters not in character set' do
@@ -67,6 +67,13 @@ RSpec.describe do
     enigma = Enigma.new
     decrypted_hash = { decryption: "h5llo world", key: "02715", date: "040895" }
     expect(enigma.decrypt("k5der ohulw", "02715", "040895")).to eq(decrypted_hash)
+  end
+
+  it 'can encrypt and decrypt' do
+    enigma = Enigma.new
+    encrypted = enigma.encrypt("hello world","02715", "040895")
+    decrypted_hash = { decryption: "hello world", key: "02715", date: "040895" }
+    expect(enigma.decrypt(encrypted[:encryption], "02715", "040895")).to eq(decrypted_hash)
   end
 
 
