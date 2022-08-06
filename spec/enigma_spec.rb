@@ -19,16 +19,11 @@ RSpec.describe do
     expect(enigma.encryptor).to be_instance_of(Encryptor)
   end
 
-  it 'has an nil encrypted upon instantiation' do
-    enigma = Enigma.new
-    expect(enigma.encrypted).to be(nil)
-  end
-
   it 'can encrypt hello world' do
     enigma = Enigma.new
     encrypted_hash = { encryption: "keder ohulw", key: "02715", date: "040895" }
 
-    expect(enigma.encrypt("hello world","02715", "040895" )).to eq(encrypted_hash)
+    expect(enigma.encrypt("hello world","02715", "040895")).to eq(encrypted_hash)
   end
 
   it 'can encrypt a message that includes characters not in character set' do
@@ -36,14 +31,6 @@ RSpec.describe do
     encrypted_hash = { encryption: "keder ohulw!$", key: "02715", date: "040895" }
 
     expect(enigma.encrypt("hello world!$", "02715", "040895")).to eq(encrypted_hash)
-  end
-
-  it 'can have an encrypted hash after encrypting' do
-    enigma = Enigma.new
-    enigma.encrypt("hello world!$", "02715", "040895")
-    encrypted_hash = { encryption: "keder ohulw!$", key: "02715", date: "040895" }
-
-    expect(enigma.encrypted).to eq(encrypted_hash)
   end
 
   it 'can encrypt a message that includes capital letters' do
@@ -80,6 +67,13 @@ RSpec.describe do
     enigma = Enigma.new
     decrypted_hash = { decryption: "h5llo world", key: "02715", date: "040895" }
     expect(enigma.decrypt("k5der ohulw", "02715", "040895")).to eq(decrypted_hash)
+  end
+
+  xit 'can encrypt and decrypt' do
+    enigma = Enigma.new
+    encrypted = enigma.encrypt("hello world","02715", "040895")
+    decrypted_hash = { decryption: "h5llo world", key: "02715", date: "040895" }
+    expect(enigma.decrypt(encrypted[:encryption], "02715", "040895")).to eq(decrypted_hash)
   end
 
 
