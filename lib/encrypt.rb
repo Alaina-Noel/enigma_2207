@@ -1,9 +1,15 @@
-#do what needs to be done in here so that we can read and write to the other files
+require './lib/enigma'
+require './lib/shift_generator'
+require './lib/encryptor'
 
-file = File.open('message.txt', "r")
-require "pry"
-binding.pry
-file.readlines
-#read the message from the txt file
-#encrypt that message
-#write the contents of that encryption to a file called decrypted
+file1 = File.open("#{ARGV[0]}", "r")
+# require "pry"
+# binding.pry
+message_from_file = file1.read.strip
+enigma = Enigma.new
+encrypted = enigma.encrypt(message_from_file)
+file2 = File.open("#{ARGV[1]}", "w")
+file2.write(encrypted)
+file2.close
+puts "Created '#{ARGV[1]}' with the key #{encrypted[:key]} and date #{encrypted[:date]}"
+#need to take care of multiline messages
