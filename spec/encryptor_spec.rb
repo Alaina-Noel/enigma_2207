@@ -15,14 +15,6 @@ RSpec.describe do
     expect(encryptor.char_set).to eq(char_set_expected)
   end
 
-  it 'can rotate a single character' do
-    encryptor = Encryptor.new
-    shift_generator = ShiftGenerator.new
-    shifter = shift_generator.create_shifter("02715", "040895")
-
-    expect(encryptor.rotate_char("h", 4, shifter)).to eq("k")
-  end
-
   it 'can apply a shift to a message' do
     encryptor = Encryptor.new
     shift_generator = ShiftGenerator.new
@@ -52,14 +44,6 @@ RSpec.describe do
     shifter = {A: 3, B: 27, C: 73, D: 20}
 
     expect(encryptor.apply_shift("HELLO world$!", shifter)).to eq("keder ohulw$!")
-  end
-
-  it 'can un-rotate a single character' do
-    encryptor = Encryptor.new
-    shift_generator = ShiftGenerator.new
-    shifter = shift_generator.create_shifter("02715", "040895")
-
-    expect(encryptor.unrotate_char("k", 4, shifter)).to eq("h")
   end
 
   it 'can apply an unshift to a message' do
