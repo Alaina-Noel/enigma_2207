@@ -1,4 +1,4 @@
-require_relative "./rotatable"
+require_relative './rotatable'
 
 class Encryptor
   include Rotatable
@@ -6,11 +6,11 @@ class Encryptor
   attr_reader :char_set
 
   def initialize
-    @char_set = ("a".."z").to_a << " "
+    @char_set = ('a'..'z').to_a << ' '
   end
 
   def apply_shift(message, shifter)
-    message.downcase.split("").map.with_index do |char, index|
+    message.downcase.split('').map.with_index do |char, index|
       if !@char_set.include?(char)
         char
       else
@@ -20,7 +20,7 @@ class Encryptor
   end
 
   def apply_unshift(message, shifter)
-    message.downcase.split("").map.with_index do |char, index|
+    message.downcase.split('').map.with_index do |char, index|
       if !@char_set.include?(char)
         char
       else
@@ -28,6 +28,4 @@ class Encryptor
       end
     end.join.to_s
   end
-
-
 end
