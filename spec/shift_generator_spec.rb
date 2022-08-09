@@ -10,13 +10,13 @@ RSpec.describe do
   it 'can create four keys from the one key' do
     shift_generator = ShiftGenerator.new
     hash = { A: 0o2, B: 27, C: 71, D: 15 }
-    expect(shift_generator.create_keys('02715', '040895')).to eq(hash)
+    expect(shift_generator.create_keys('02715')).to eq(hash)
   end
 
   it 'can create four offsets from the date' do
     shift_generator = ShiftGenerator.new
     hash = { A: 1, B: 0, C: 2, D: 5 }
-    expect(shift_generator.create_offsets('02715', '040895')).to eq(hash)
+    expect(shift_generator.create_offsets('040895')).to eq(hash)
   end
 
   it 'can generate a shift hash' do
