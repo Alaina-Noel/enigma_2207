@@ -1,7 +1,7 @@
 class ShiftGenerator
   def initialize; end
 
-  def create_keys(key, _date)
+  def create_keys(key)
     four_keys = { A: 0, B: 0, C: 0, D: 0 }
     key_array = key.split('')
     four_keys[:A] = (key_array[0] + key_array[1]).to_i
@@ -11,7 +11,7 @@ class ShiftGenerator
     four_keys
   end
 
-  def create_offsets(_key, date)
+  def create_offsets(date)
     four_offsets = { A: 0, B: 0, C: 0, D: 0 }
     four_digit_string = (date.to_i**2).to_s.slice(-4..-1)
     four_offsets[:A] = four_digit_string[0].to_i
@@ -22,8 +22,8 @@ class ShiftGenerator
   end
 
   def create_shifter(key, date)
-    four_keys = create_keys(key, date)
-    four_offsets = create_offsets(key, date)
+    four_keys = create_keys(key)
+    four_offsets = create_offsets(date)
     four_keys.merge!(four_offsets) do |_shift_letter, key, offset|
       key + offset
     end
