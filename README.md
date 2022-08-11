@@ -1,6 +1,10 @@
-###Enigma Self Assessment###
-<img src="./images/img_1.jpg" alt="Self Assessment on Functionality is a four" title="Functionality">
-<img src="./images/img_2.jpg" alt="Self Assessment on Object Oriented Programming is a four" title="OOP">
-<img src="./images/img_3.jpg" alt="Self Assessment on Ruby Mechanics and Conventions is a four" title="Mechanics and Conventions">
-<img src="./images/img_4.jpg" alt="Self Assessment on Test Driven Development is a four" title="TDD">
-<img src="./images/img_5.jpg" alt="Self Assessment on Version Control is a three point five" title="Version Control">
+###How to Play the Game###
+
+1. Open the message.txt file and type a message you'd like to encrypt.
+1. From your terminal run
+  ruby ./lib/encrypt.rb message.txt encrypted.txt
+1. Note the key and date that are used.
+1. Check out the encrypted.txt file. Your message has been encrypted!
+1. From your terminal run
+./lib/decrypt.rb encrypted.txt decrypted.txt <key_used_for_encryption> <date_used_for_encryption>
+1. Check the decrypted.txt file for your decrypted message!
